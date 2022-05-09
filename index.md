@@ -1,4 +1,4 @@
-## Welcome to GitHub Pages
+## CMSC320 Final Project
 
 You can use the [editor on GitHub](https://github.com/sseth18/cmsc320final/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
 
