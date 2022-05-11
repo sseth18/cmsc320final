@@ -19,7 +19,7 @@ receivers
 
 ```
 receivers.rename(columns={"Unnamed: 0_level_0":"Player"}, inplace=True)
-receivers.rename(columns={"Unnamed: 1_level_0":"Bye"}, inplace=True)
+receivers.drop(columns={"Unnamed: 1_level_0":"Bye"}, inplace=True)
 receivers.rename(columns={"Unnamed: 2_level_0":"Pts"}, inplace=True)
 
 import matplotlib.pyplot as plt
