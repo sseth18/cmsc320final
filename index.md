@@ -29,3 +29,10 @@ receivers["Points per Touch"] = receivers["Pts"]["Pts*"]/receivers["Touches"]
 
 receivers.head()
 ```
+
+```
+receivers_50Touches = receivers[receivers['Touches'] > 50]
+top50receivers = receivers[:50]
+
+receivers_50Touches.reset_index()
+```
