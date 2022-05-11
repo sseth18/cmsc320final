@@ -24,19 +24,8 @@ receivers.rename(columns={"Unnamed: 2_level_0":"Pts"}, inplace=True)
 
 import matplotlib.pyplot as plt
 
-#we ar going to iterate over every player
-for ind, player in receivers.iterrows():
-    
-    #touches is the total touches for the player
-    touches = player["Passing"]["Cmp"] + player["Rushing"]["Att"] + player["Receiving"]["Rec"]
-    
-    if touches > 35:
-        #ppt is the points-per-touch for the player
-        ppt = (player["Pts"]["Pts*"])/touches
-    
-        plt.scatter(touches, ppt, c="black")
-    
-plt.xlabel("Touches")
-plt.ylabel("Points per Touch")
-plt.show()
+receivers["Touches"] = receivers["Passing"]["Cmp"] + receivers["Rushing"]["Att"] + receivers["Receiving"]["Rec"]
+receivers["Points per Touch"] = receivers["Pts"]["Pts*"]/receivers["Touches"]
+
+receivers.head()
 ```
