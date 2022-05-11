@@ -22,6 +22,12 @@ receivers.rename(columns={"Unnamed: 0_level_0":"Player"}, inplace=True)
 receivers.drop(columns={"Unnamed: 1_level_0":"Bye"}, inplace=True)
 receivers.rename(columns={"Unnamed: 2_level_0":"Pts"}, inplace=True)
 
+receivers["Player Name"] = list(map(lambda x: re.sub("\..+", '', x)[:-1], receivers["Player"]["Player"]))
+
+receivers.drop("Player", axis=1, inplace=True)
+receivers.drop("Bye", axis=1, inplace=True)
+
+
 import matplotlib.pyplot as plt
 
 receivers["Touches"] = receivers["Passing"]["Cmp"] + receivers["Rushing"]["Att"] + receivers["Receiving"]["Rec"]
