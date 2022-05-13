@@ -4,15 +4,11 @@ Final project and tutorial for CMSC320 at UMD
 
 Looking at Fantasy Football data and trends from the 2021-2022 NFL season
 
-```
-def get_bad(df): #returns a list of the players in the bottom left corner
-    meanTouches = np.mean(df["Touches"])
-    meanPPT = np.mean(df["Points per Touch"])
-    bad_players = []
-    
-    for ind,player in df.iterrows():
-        if (player["Touches"]<meanTouches)[0] and (player["Points per Touch"]<meanPPT)[0]:
-            bad_players.append(player["Player Name"][0])
-        
-    return bad_players
-```
+# Hypothesis 
+
+Our graph defines a metric which shows how efficient a player is and how much a player is used. Our metric defines 4 types of players:
+### 1. Promising: these players ahve high efficiency (PPT) but low usage.
+### 2. The Best: these players have high efficiency and high usage.
+### 3. The Worst: these players have low efficiency and low usage.
+### 4. Dominant: these players have high usage but low efficiency.
+
