@@ -12,4 +12,4 @@ Looking at Fantasy Football data and trends from the 2021-2022 NFL season
 ### 3. The Worst: these players have low efficiency and low usage.
 ### 4. Dominant: these players have high usage but low efficiency.
 
-In order to test this hypothesis, we will be testing our metric's ability to determine whether a player is bad. We will test this ability by comparing our list of The Worst fantasy players to the consensus rankings by fantasy experts on fantasypros.com.
+To save time since we will be testing our hypothesis on WR, RB, and TE, we will only be testing how well our metric classifies bad players. We will test this by comparing our list of The Worst fantasy players to the consensus rankings by fantasy experts on fantasypros.com.
