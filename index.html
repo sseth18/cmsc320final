@@ -14679,29 +14679,17 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[3]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">wr</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;Unnamed: 0_level_0&quot;</span><span class="p">:</span><span class="s2">&quot;Player&quot;</span><span class="p">},</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="n">wr</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;Unnamed: 1_level_0&quot;</span><span class="p">:</span><span class="s2">&quot;Bye&quot;</span><span class="p">},</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">level</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
-<span class="n">wr</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;Unnamed: 2_level_0&quot;</span><span class="p">:</span><span class="s2">&quot;Pts&quot;</span><span class="p">},</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="n">wr</span><span class="p">[</span><span class="s2">&quot;Player Name&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="s2">&quot;\..+&quot;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">x</span><span class="p">)[:</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="n">wr</span><span class="p">[</span><span class="s2">&quot;Player&quot;</span><span class="p">][</span><span class="s2">&quot;Player&quot;</span><span class="p">]))</span>
-<span class="n">wr</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s2">&quot;Player&quot;</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">level</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
-
-<span class="n">rb</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;Unnamed: 0_level_0&quot;</span><span class="p">:</span><span class="s2">&quot;Player&quot;</span><span class="p">},</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="n">rb</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;Unnamed: 1_level_0&quot;</span><span class="p">:</span><span class="s2">&quot;Bye&quot;</span><span class="p">},</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">level</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
-<span class="n">rb</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;Unnamed: 2_level_0&quot;</span><span class="p">:</span><span class="s2">&quot;Pts&quot;</span><span class="p">},</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="n">rb</span><span class="p">[</span><span class="s2">&quot;Player Name&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="s2">&quot;\..+&quot;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">x</span><span class="p">)[:</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="n">rb</span><span class="p">[</span><span class="s2">&quot;Player&quot;</span><span class="p">][</span><span class="s2">&quot;Player&quot;</span><span class="p">]))</span>
-<span class="n">rb</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s2">&quot;Player&quot;</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">level</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
-
-<span class="n">te</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;Unnamed: 0_level_0&quot;</span><span class="p">:</span><span class="s2">&quot;Player&quot;</span><span class="p">},</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="n">te</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;Unnamed: 1_level_0&quot;</span><span class="p">:</span><span class="s2">&quot;Bye&quot;</span><span class="p">},</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">level</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
-<span class="n">te</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;Unnamed: 2_level_0&quot;</span><span class="p">:</span><span class="s2">&quot;Pts&quot;</span><span class="p">},</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="n">te</span><span class="p">[</span><span class="s2">&quot;Player Name&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="s2">&quot;\..+&quot;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">x</span><span class="p">)[:</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="n">te</span><span class="p">[</span><span class="s2">&quot;Player&quot;</span><span class="p">][</span><span class="s2">&quot;Player&quot;</span><span class="p">]))</span>
-<span class="n">te</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s2">&quot;Player&quot;</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">level</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
-
-<span class="n">flex</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;Unnamed: 0_level_0&quot;</span><span class="p">:</span><span class="s2">&quot;Player&quot;</span><span class="p">},</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="n">flex</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;Unnamed: 1_level_0&quot;</span><span class="p">:</span><span class="s2">&quot;Bye&quot;</span><span class="p">},</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">level</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
-<span class="n">flex</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;Unnamed: 2_level_0&quot;</span><span class="p">:</span><span class="s2">&quot;Pts&quot;</span><span class="p">},</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="n">flex</span><span class="p">[</span><span class="s2">&quot;Player Name&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="s2">&quot;\..+&quot;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">x</span><span class="p">)[:</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="n">flex</span><span class="p">[</span><span class="s2">&quot;Player&quot;</span><span class="p">][</span><span class="s2">&quot;Player&quot;</span><span class="p">]))</span>
-<span class="n">flex</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s2">&quot;Player&quot;</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">level</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">clean_df</span><span class="p">(</span><span class="n">df</span><span class="p">):</span>
+    <span class="n">df</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;Unnamed: 0_level_0&quot;</span><span class="p">:</span><span class="s2">&quot;Player&quot;</span><span class="p">},</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="n">df</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;Unnamed: 1_level_0&quot;</span><span class="p">:</span><span class="s2">&quot;Bye&quot;</span><span class="p">},</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">level</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+    <span class="n">df</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;Unnamed: 2_level_0&quot;</span><span class="p">:</span><span class="s2">&quot;Pts&quot;</span><span class="p">},</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="n">df</span><span class="p">[</span><span class="s2">&quot;Player Name&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">re</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="s2">&quot;[A-Z][^\s]*\s[A-Z][^\.]*&quot;</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span><span class="o">.</span><span class="n">group</span><span class="p">()[:</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;Player&quot;</span><span class="p">][</span><span class="s2">&quot;Player&quot;</span><span class="p">]))</span>
+    <span class="n">df</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s2">&quot;Player&quot;</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">level</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+    
+<span class="n">clean_df</span><span class="p">(</span><span class="n">wr</span><span class="p">)</span>
+<span class="n">clean_df</span><span class="p">(</span><span class="n">rb</span><span class="p">)</span>
+<span class="n">clean_df</span><span class="p">(</span><span class="n">te</span><span class="p">)</span>
+<span class="n">clean_df</span><span class="p">(</span><span class="n">flex</span><span class="p">)</span>
 </pre></div>
 
      </div>
@@ -15860,6 +15848,795 @@ We looked back at our original dataset from “The Football Database” in order
 
 </div>
 </div>
+</div>
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2><center> Hypothesis Testing <center></h2>
+
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[13]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">getRankings</span><span class="p">(</span><span class="n">url</span><span class="p">):</span>
+    <span class="n">df</span> <span class="o">=</span> <span class="n">getTable</span><span class="p">(</span><span class="n">url</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">df</span><span class="p">[</span><span class="s2">&quot;Player Team (Bye)&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">re</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="s2">&quot;[A-Z][^\s]*\s[A-Z][^\s]*&quot;</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span><span class="o">.</span><span class="n">group</span><span class="p">(),</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;Player Team (Bye)&quot;</span><span class="p">]))</span>
+    <span class="n">df</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;Player Team (Bye)&quot;</span><span class="p">:</span> <span class="s2">&quot;Player Name&quot;</span><span class="p">},</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    
+    <span class="k">return</span> <span class="n">df</span>
+    
+<span class="n">wrRankings</span> <span class="o">=</span> <span class="n">getRankings</span><span class="p">(</span><span class="s2">&quot;https://www.fantasypros.com/nfl/adp/ppr-wr.php&quot;</span><span class="p">)</span>
+<span class="n">rbRankings</span> <span class="o">=</span> <span class="n">getRankings</span><span class="p">(</span><span class="s2">&quot;https://www.fantasypros.com/nfl/adp/ppr-rb.php&quot;</span><span class="p">)</span>
+<span class="n">teRankings</span> <span class="o">=</span> <span class="n">getRankings</span><span class="p">(</span><span class="s2">&quot;https://www.fantasypros.com/nfl/adp/ppr-te.php&quot;</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[13]:</div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>RB</th>
+      <th>Overall</th>
+      <th>Player Name</th>
+      <th>ESPN</th>
+      <th>RTSports</th>
+      <th>MFL</th>
+      <th>Fantrax</th>
+      <th>FFC</th>
+      <th>Sleeper</th>
+      <th>AVG</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1</td>
+      <td>1</td>
+      <td>Jonathan Taylor</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>NaN</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2</td>
+      <td>2</td>
+      <td>Austin Ekeler</td>
+      <td>3.0</td>
+      <td>2.0</td>
+      <td>NaN</td>
+      <td>2.0</td>
+      <td>4.0</td>
+      <td>5.0</td>
+      <td>2.8</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>3</td>
+      <td>3</td>
+      <td>Derrick Henry</td>
+      <td>4.0</td>
+      <td>5.0</td>
+      <td>NaN</td>
+      <td>3.0</td>
+      <td>2.0</td>
+      <td>4.0</td>
+      <td>3.5</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>4</td>
+      <td>5</td>
+      <td>Christian McCaffrey</td>
+      <td>2.0</td>
+      <td>3.0</td>
+      <td>NaN</td>
+      <td>6.0</td>
+      <td>9.0</td>
+      <td>2.0</td>
+      <td>5.0</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>5</td>
+      <td>6</td>
+      <td>Dalvin Cook</td>
+      <td>7.0</td>
+      <td>6.0</td>
+      <td>NaN</td>
+      <td>4.0</td>
+      <td>5.0</td>
+      <td>3.0</td>
+      <td>5.5</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>6</td>
+      <td>8</td>
+      <td>Najee Harris</td>
+      <td>5.0</td>
+      <td>4.0</td>
+      <td>NaN</td>
+      <td>8.0</td>
+      <td>6.0</td>
+      <td>6.0</td>
+      <td>5.8</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>7</td>
+      <td>10</td>
+      <td>Joe Mixon</td>
+      <td>8.0</td>
+      <td>8.0</td>
+      <td>NaN</td>
+      <td>9.0</td>
+      <td>3.0</td>
+      <td>7.0</td>
+      <td>7.0</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>8</td>
+      <td>11</td>
+      <td>Alvin Kamara</td>
+      <td>6.0</td>
+      <td>11.0</td>
+      <td>NaN</td>
+      <td>5.0</td>
+      <td>8.0</td>
+      <td>10.0</td>
+      <td>7.5</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>9</td>
+      <td>16</td>
+      <td>D'Andre Swift</td>
+      <td>10.0</td>
+      <td>9.0</td>
+      <td>NaN</td>
+      <td>13.0</td>
+      <td>12.0</td>
+      <td>8.0</td>
+      <td>11.0</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>10</td>
+      <td>19</td>
+      <td>Antonio Gibson</td>
+      <td>18.0</td>
+      <td>14.0</td>
+      <td>NaN</td>
+      <td>7.0</td>
+      <td>11.0</td>
+      <td>14.0</td>
+      <td>12.5</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>11</td>
+      <td>26</td>
+      <td>Leonard Fournette</td>
+      <td>9.0</td>
+      <td>10.0</td>
+      <td>NaN</td>
+      <td>10.0</td>
+      <td>22.0</td>
+      <td>20.0</td>
+      <td>12.8</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>12</td>
+      <td>18</td>
+      <td>Nick Chubb</td>
+      <td>15.0</td>
+      <td>12.0</td>
+      <td>NaN</td>
+      <td>18.0</td>
+      <td>7.0</td>
+      <td>9.0</td>
+      <td>13.0</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>13</td>
+      <td>24</td>
+      <td>Javonte Williams</td>
+      <td>13.0</td>
+      <td>7.0</td>
+      <td>NaN</td>
+      <td>24.0</td>
+      <td>10.0</td>
+      <td>13.0</td>
+      <td>13.5</td>
+    </tr>
+    <tr>
+      <th>13</th>
+      <td>14</td>
+      <td>25</td>
+      <td>Aaron Jones</td>
+      <td>12.0</td>
+      <td>18.0</td>
+      <td>NaN</td>
+      <td>17.0</td>
+      <td>15.0</td>
+      <td>15.0</td>
+      <td>15.5</td>
+    </tr>
+    <tr>
+      <th>14</th>
+      <td>15</td>
+      <td>36</td>
+      <td>James Conner</td>
+      <td>11.0</td>
+      <td>16.0</td>
+      <td>NaN</td>
+      <td>15.0</td>
+      <td>24.0</td>
+      <td>22.0</td>
+      <td>16.5</td>
+    </tr>
+    <tr>
+      <th>15</th>
+      <td>16</td>
+      <td>33</td>
+      <td>Josh Jacobs</td>
+      <td>19.0</td>
+      <td>13.0</td>
+      <td>NaN</td>
+      <td>14.0</td>
+      <td>21.0</td>
+      <td>19.0</td>
+      <td>16.8</td>
+    </tr>
+    <tr>
+      <th>16</th>
+      <td>17</td>
+      <td>28</td>
+      <td>Ezekiel Elliott</td>
+      <td>21.0</td>
+      <td>20.0</td>
+      <td>NaN</td>
+      <td>16.0</td>
+      <td>14.0</td>
+      <td>12.0</td>
+      <td>17.8</td>
+    </tr>
+    <tr>
+      <th>17</th>
+      <td>18</td>
+      <td>29</td>
+      <td>Saquon Barkley</td>
+      <td>17.0</td>
+      <td>15.0</td>
+      <td>NaN</td>
+      <td>21.0</td>
+      <td>18.0</td>
+      <td>11.0</td>
+      <td>17.8</td>
+    </tr>
+    <tr>
+      <th>18</th>
+      <td>19</td>
+      <td>35</td>
+      <td>David Montgomery</td>
+      <td>16.0</td>
+      <td>19.0</td>
+      <td>NaN</td>
+      <td>25.0</td>
+      <td>13.0</td>
+      <td>17.0</td>
+      <td>18.3</td>
+    </tr>
+    <tr>
+      <th>19</th>
+      <td>20</td>
+      <td>45</td>
+      <td>Elijah Mitchell</td>
+      <td>24.0</td>
+      <td>23.0</td>
+      <td>NaN</td>
+      <td>11.0</td>
+      <td>17.0</td>
+      <td>29.0</td>
+      <td>18.8</td>
+    </tr>
+    <tr>
+      <th>20</th>
+      <td>21</td>
+      <td>50</td>
+      <td>Clyde Edwards-Helaire</td>
+      <td>25.0</td>
+      <td>29.0</td>
+      <td>NaN</td>
+      <td>20.0</td>
+      <td>19.0</td>
+      <td>23.0</td>
+      <td>23.3</td>
+    </tr>
+    <tr>
+      <th>21</th>
+      <td>22</td>
+      <td>57</td>
+      <td>Michael Carter</td>
+      <td>34.0</td>
+      <td>26.0</td>
+      <td>NaN</td>
+      <td>12.0</td>
+      <td>28.0</td>
+      <td>31.0</td>
+      <td>25.0</td>
+    </tr>
+    <tr>
+      <th>22</th>
+      <td>23</td>
+      <td>63</td>
+      <td>AJ Dillon</td>
+      <td>33.0</td>
+      <td>25.0</td>
+      <td>NaN</td>
+      <td>23.0</td>
+      <td>25.0</td>
+      <td>32.0</td>
+      <td>26.5</td>
+    </tr>
+    <tr>
+      <th>23</th>
+      <td>24</td>
+      <td>56</td>
+      <td>Damien Harris</td>
+      <td>30.0</td>
+      <td>28.0</td>
+      <td>NaN</td>
+      <td>29.0</td>
+      <td>20.0</td>
+      <td>25.0</td>
+      <td>26.8</td>
+    </tr>
+    <tr>
+      <th>24</th>
+      <td>25</td>
+      <td>61</td>
+      <td>Miles Sanders</td>
+      <td>27.0</td>
+      <td>33.0</td>
+      <td>NaN</td>
+      <td>26.0</td>
+      <td>29.0</td>
+      <td>24.0</td>
+      <td>28.8</td>
+    </tr>
+    <tr>
+      <th>25</th>
+      <td>26</td>
+      <td>75</td>
+      <td>Devin Singletary</td>
+      <td>28.0</td>
+      <td>30.0</td>
+      <td>NaN</td>
+      <td>30.0</td>
+      <td>34.0</td>
+      <td>34.0</td>
+      <td>30.5</td>
+    </tr>
+    <tr>
+      <th>26</th>
+      <td>27</td>
+      <td>77</td>
+      <td>James Robinson</td>
+      <td>41.0</td>
+      <td>39.0</td>
+      <td>NaN</td>
+      <td>19.0</td>
+      <td>31.0</td>
+      <td>27.0</td>
+      <td>32.5</td>
+    </tr>
+    <tr>
+      <th>27</th>
+      <td>28</td>
+      <td>78</td>
+      <td>Kareem Hunt</td>
+      <td>29.0</td>
+      <td>32.0</td>
+      <td>NaN</td>
+      <td>43.0</td>
+      <td>30.0</td>
+      <td>26.0</td>
+      <td>33.5</td>
+    </tr>
+    <tr>
+      <th>28</th>
+      <td>29</td>
+      <td>87</td>
+      <td>Chase Edmonds</td>
+      <td>31.0</td>
+      <td>36.0</td>
+      <td>NaN</td>
+      <td>32.0</td>
+      <td>38.0</td>
+      <td>38.0</td>
+      <td>34.3</td>
+    </tr>
+    <tr>
+      <th>29</th>
+      <td>30</td>
+      <td>90</td>
+      <td>Tony Pollard</td>
+      <td>32.0</td>
+      <td>35.0</td>
+      <td>NaN</td>
+      <td>37.0</td>
+      <td>33.0</td>
+      <td>36.0</td>
+      <td>34.3</td>
+    </tr>
+    <tr>
+      <th>30</th>
+      <td>31</td>
+      <td>83</td>
+      <td>Cam Akers</td>
+      <td>14.0</td>
+      <td>17.0</td>
+      <td>NaN</td>
+      <td>82.0</td>
+      <td>27.0</td>
+      <td>16.0</td>
+      <td>35.0</td>
+    </tr>
+    <tr>
+      <th>31</th>
+      <td>32</td>
+      <td>82</td>
+      <td>J.K. Dobbins</td>
+      <td>20.0</td>
+      <td>22.0</td>
+      <td>NaN</td>
+      <td>84.0</td>
+      <td>16.0</td>
+      <td>18.0</td>
+      <td>35.5</td>
+    </tr>
+    <tr>
+      <th>32</th>
+      <td>33</td>
+      <td>97</td>
+      <td>Rashaad Penny</td>
+      <td>36.0</td>
+      <td>27.0</td>
+      <td>NaN</td>
+      <td>54.0</td>
+      <td>26.0</td>
+      <td>35.0</td>
+      <td>35.8</td>
+    </tr>
+    <tr>
+      <th>33</th>
+      <td>34</td>
+      <td>94</td>
+      <td>Melvin Gordon</td>
+      <td>40.0</td>
+      <td>37.0</td>
+      <td>NaN</td>
+      <td>34.0</td>
+      <td>32.0</td>
+      <td>39.0</td>
+      <td>35.8</td>
+    </tr>
+    <tr>
+      <th>34</th>
+      <td>35</td>
+      <td>96</td>
+      <td>Travis Etienne</td>
+      <td>26.0</td>
+      <td>24.0</td>
+      <td>NaN</td>
+      <td>83.0</td>
+      <td>23.0</td>
+      <td>21.0</td>
+      <td>39.0</td>
+    </tr>
+    <tr>
+      <th>35</th>
+      <td>36</td>
+      <td>110</td>
+      <td>Darrell Henderson</td>
+      <td>48.0</td>
+      <td>46.0</td>
+      <td>NaN</td>
+      <td>28.0</td>
+      <td>37.0</td>
+      <td>48.0</td>
+      <td>39.8</td>
+    </tr>
+    <tr>
+      <th>36</th>
+      <td>37</td>
+      <td>104</td>
+      <td>Raheem Mostert</td>
+      <td>38.0</td>
+      <td>43.0</td>
+      <td>NaN</td>
+      <td>39.0</td>
+      <td>41.0</td>
+      <td>46.0</td>
+      <td>40.3</td>
+    </tr>
+    <tr>
+      <th>37</th>
+      <td>38</td>
+      <td>107</td>
+      <td>Chris Carson</td>
+      <td>53.0</td>
+      <td>52.0</td>
+      <td>NaN</td>
+      <td>22.0</td>
+      <td>36.0</td>
+      <td>40.0</td>
+      <td>40.8</td>
+    </tr>
+    <tr>
+      <th>38</th>
+      <td>39</td>
+      <td>103</td>
+      <td>Rhamondre Stevenson</td>
+      <td>42.0</td>
+      <td>38.0</td>
+      <td>NaN</td>
+      <td>38.0</td>
+      <td>47.0</td>
+      <td>41.0</td>
+      <td>41.3</td>
+    </tr>
+    <tr>
+      <th>39</th>
+      <td>40</td>
+      <td>121</td>
+      <td>J.D. McKissic</td>
+      <td>45.0</td>
+      <td>47.0</td>
+      <td>NaN</td>
+      <td>35.0</td>
+      <td>45.0</td>
+      <td>53.0</td>
+      <td>43.0</td>
+    </tr>
+    <tr>
+      <th>40</th>
+      <td>41</td>
+      <td>80</td>
+      <td>Cordarrelle Patterson</td>
+      <td>23.0</td>
+      <td>34.0</td>
+      <td>NaN</td>
+      <td>33.0</td>
+      <td>NaN</td>
+      <td>37.0</td>
+      <td>30.0</td>
+    </tr>
+    <tr>
+      <th>41</th>
+      <td>42</td>
+      <td>118</td>
+      <td>Alexander Mattison</td>
+      <td>44.0</td>
+      <td>44.0</td>
+      <td>NaN</td>
+      <td>47.0</td>
+      <td>39.0</td>
+      <td>47.0</td>
+      <td>43.5</td>
+    </tr>
+    <tr>
+      <th>42</th>
+      <td>43</td>
+      <td>117</td>
+      <td>Ronald Jones</td>
+      <td>39.0</td>
+      <td>40.0</td>
+      <td>NaN</td>
+      <td>59.0</td>
+      <td>40.0</td>
+      <td>42.0</td>
+      <td>44.5</td>
+    </tr>
+    <tr>
+      <th>43</th>
+      <td>44</td>
+      <td>128</td>
+      <td>Myles Gaskin</td>
+      <td>59.0</td>
+      <td>62.0</td>
+      <td>NaN</td>
+      <td>27.0</td>
+      <td>44.0</td>
+      <td>44.0</td>
+      <td>48.0</td>
+    </tr>
+    <tr>
+      <th>44</th>
+      <td>45</td>
+      <td>132</td>
+      <td>Nyheim Hines</td>
+      <td>49.0</td>
+      <td>50.0</td>
+      <td>NaN</td>
+      <td>49.0</td>
+      <td>48.0</td>
+      <td>51.0</td>
+      <td>49.0</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[20]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">get_bad</span><span class="p">(</span><span class="n">df</span><span class="p">):</span> <span class="c1">#returns a list of the players in the bottom left corner</span>
+    <span class="n">meanTouches</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;Touches&quot;</span><span class="p">])</span>
+    <span class="n">meanPPT</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;Points per Touch&quot;</span><span class="p">])</span>
+    <span class="n">bad_players</span> <span class="o">=</span> <span class="p">[]</span>
+    
+    <span class="k">for</span> <span class="n">ind</span><span class="p">,</span><span class="n">player</span> <span class="ow">in</span> <span class="n">df</span><span class="o">.</span><span class="n">iterrows</span><span class="p">():</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">player</span><span class="p">[</span><span class="s2">&quot;Touches&quot;</span><span class="p">]</span><span class="o">&lt;</span><span class="n">meanTouches</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span> <span class="ow">and</span> <span class="p">(</span><span class="n">player</span><span class="p">[</span><span class="s2">&quot;Points per Touch&quot;</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">meanPPT</span><span class="p">)[</span><span class="mi">0</span><span class="p">]:</span>
+            <span class="n">bad_players</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">player</span><span class="p">[</span><span class="s2">&quot;Player Name&quot;</span><span class="p">][</span><span class="mi">0</span><span class="p">])</span>
+        
+    <span class="k">return</span> <span class="n">bad_players</span>
+
+<span class="k">def</span> <span class="nf">getPlayerRanking</span><span class="p">(</span><span class="n">player</span><span class="p">,</span> <span class="n">posRankings</span><span class="p">,</span> <span class="n">pos</span><span class="p">):</span>
+    <span class="n">player</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="s2">&quot;[A-Z][^\s]*\s[A-Z][^\s]*&quot;</span><span class="p">,</span> <span class="n">player</span><span class="p">)</span><span class="o">.</span><span class="n">group</span><span class="p">()</span>
+    
+    <span class="n">ranking</span> <span class="o">=</span> <span class="n">posRankings</span><span class="p">[</span><span class="n">posRankings</span><span class="p">[</span><span class="s2">&quot;Player Name&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="n">player</span><span class="p">]</span>
+    
+    <span class="k">if</span> <span class="n">ranking</span><span class="o">.</span><span class="n">empty</span><span class="p">:</span>
+        <span class="k">return</span> <span class="kc">None</span>
+    
+    <span class="k">return</span> <span class="n">ranking</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="n">pos</span><span class="p">]</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[31]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">playerRankTuple</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">dfRankings</span><span class="p">,</span> <span class="n">pos</span><span class="p">):</span>
+    <span class="n">bad_players</span> <span class="o">=</span> <span class="n">get_bad</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="nb">list</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">getPlayerRanking</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">dfRankings</span><span class="p">,</span> <span class="n">pos</span><span class="p">)),</span> <span class="n">bad_players</span><span class="p">))</span>
+
+<span class="n">badWRtouches</span> <span class="o">=</span> <span class="n">playerRankTuple</span><span class="p">(</span><span class="n">wr50touches</span><span class="p">,</span> <span class="n">wrRankings</span><span class="p">,</span> <span class="s2">&quot;WR&quot;</span><span class="p">)</span>
+<span class="n">badWRpts</span> <span class="o">=</span> <span class="n">playerRankTuple</span><span class="p">(</span><span class="n">top50wr</span><span class="p">,</span> <span class="n">wrRankings</span><span class="p">,</span> <span class="s2">&quot;WR&quot;</span><span class="p">)</span>
+
+<span class="n">badRBtouches</span> <span class="o">=</span> <span class="n">playerRankTuple</span><span class="p">(</span><span class="n">rb100touches</span><span class="p">,</span> <span class="n">rbRankings</span><span class="p">,</span> <span class="s2">&quot;RB&quot;</span><span class="p">)</span>
+<span class="n">badRBpts</span> <span class="o">=</span> <span class="n">playerRankTuple</span><span class="p">(</span><span class="n">top50rb</span><span class="p">,</span> <span class="n">rbRankings</span><span class="p">,</span> <span class="s2">&quot;RB&quot;</span><span class="p">)</span>
+
+<span class="n">badTEtouches</span> <span class="o">=</span> <span class="n">playerRankTuple</span><span class="p">(</span><span class="n">te40touches</span><span class="p">,</span> <span class="n">teRankings</span><span class="p">,</span> <span class="s2">&quot;TE&quot;</span><span class="p">)</span>
+<span class="n">badTEpts</span> <span class="o">=</span> <span class="n">playerRankTuple</span><span class="p">(</span><span class="n">top15te</span><span class="p">,</span> <span class="n">teRankings</span><span class="p">,</span> <span class="s2">&quot;TE&quot;</span><span class="p">)</span>
+
+<span class="n">wrResults</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">rbResults</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">teResults</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="n">wrlen</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">badWRtouches</span><span class="p">)</span> <span class="o">+</span> <span class="nb">len</span><span class="p">(</span><span class="n">badWRpts</span><span class="p">)</span>
+<span class="n">rblen</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">badRBtouches</span><span class="p">)</span> <span class="o">+</span> <span class="nb">len</span><span class="p">(</span><span class="n">badRBpts</span><span class="p">)</span> 
+<span class="n">telen</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">badTEtouches</span><span class="p">)</span> <span class="o">+</span> <span class="nb">len</span><span class="p">(</span><span class="n">badTEpts</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">wr</span><span class="p">,</span> <span class="n">rank</span> <span class="ow">in</span> <span class="n">badWRtouches</span> <span class="o">+</span> <span class="n">badWRpts</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">rank</span> <span class="o">!=</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">rank</span> <span class="o">&lt;=</span> <span class="mi">35</span><span class="p">:</span>
+        <span class="n">wrResults</span> <span class="o">=</span> <span class="n">wrResults</span> <span class="o">+</span> <span class="mi">1</span>
+
+<span class="k">for</span> <span class="n">rb</span><span class="p">,</span> <span class="n">rank</span> <span class="ow">in</span> <span class="n">badRBtouches</span> <span class="o">+</span> <span class="n">badRBpts</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">rank</span> <span class="o">!=</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">rank</span> <span class="o">&lt;=</span> <span class="mi">35</span><span class="p">:</span>
+        <span class="n">rbResults</span> <span class="o">=</span> <span class="n">rbResults</span> <span class="o">+</span> <span class="mi">1</span>
+
+<span class="k">for</span> <span class="n">te</span><span class="p">,</span> <span class="n">rank</span> <span class="ow">in</span> <span class="n">badTEtouches</span> <span class="o">+</span> <span class="n">badTEpts</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">rank</span> <span class="o">!=</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">rank</span> <span class="o">&lt;=</span> <span class="mi">8</span><span class="p">:</span>
+        <span class="n">teResults</span> <span class="o">=</span> <span class="n">teResults</span> <span class="o">+</span> <span class="mi">1</span>
+        
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;WR Accuracy:&quot;</span><span class="p">,</span> <span class="p">(</span><span class="mf">100.</span> <span class="o">-</span> <span class="p">(</span><span class="n">wrResults</span><span class="o">/</span><span class="n">wrlen</span><span class="o">*</span><span class="mi">100</span><span class="p">)),</span> <span class="s2">&quot;%&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;RB Accuracy:&quot;</span><span class="p">,</span> <span class="p">(</span><span class="mf">100.</span> <span class="o">-</span> <span class="p">(</span><span class="n">rbResults</span><span class="o">/</span><span class="n">rblen</span><span class="o">*</span><span class="mi">100</span><span class="p">)),</span> <span class="s2">&quot;%&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;TE Accuracy:&quot;</span><span class="p">,</span> <span class="p">(</span><span class="mf">100.</span> <span class="o">-</span> <span class="p">(</span><span class="n">teResults</span><span class="o">/</span><span class="n">telen</span><span class="o">*</span><span class="mi">100</span><span class="p">)),</span> <span class="s2">&quot;%&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Total Accuracy:&quot;</span><span class="p">,</span> <span class="p">(</span><span class="mf">100.</span> <span class="o">-</span> <span class="p">(</span><span class="n">wrResults</span><span class="o">+</span><span class="n">rbResults</span><span class="o">+</span><span class="n">teResults</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="n">wrlen</span><span class="o">+</span><span class="n">rblen</span><span class="o">+</span><span class="n">telen</span><span class="p">)</span><span class="o">*</span><span class="mi">100</span><span class="p">),</span> <span class="s2">&quot;%&quot;</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>WR Accuracy: 95.83333333333333 %
+RB Accuracy: 70.96774193548387 %
+TE Accuracy: 71.42857142857143 %
+Total Accuracy: 79.71014492753623 %
+</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
 </div>
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
