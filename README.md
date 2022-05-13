@@ -4,6 +4,7 @@ Final project and tutorial for CMSC320 at UMD
 
 Looking at Fantasy Football data and trends from the 2021-2022 NFL season
 
+```
 def get_bad(df): #returns a list of the players in the bottom left corner
     meanTouches = np.mean(df["Touches"])
     meanPPT = np.mean(df["Points per Touch"])
@@ -14,3 +15,4 @@ def get_bad(df): #returns a list of the players in the bottom left corner
             bad_players.append(player["Player Name"][0])
         
     return bad_players
+```
